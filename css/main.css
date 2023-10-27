@@ -227,3 +227,25 @@ body {
   color: var(--primary-color) !important;
 }
 /* end alt services  */
+
+/* features section  */
+.features {
+  background-color: rgba(212, 241, 244, 0.6);
+}
+.features .nav-link {
+  width: fit-content !important;
+  transition: 0.3s;
+}
+.features .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+.features .nav-link.active {
+  border-color: var(--primary-color) !important;
+}
+.features .feat-img {
+  transition: 0.3s;
+}
+.features .feat-img:hover {
+  filter: grayscale(1);
+}
+/* end features section  */

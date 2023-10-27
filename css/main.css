@@ -4,6 +4,7 @@
   --secondary-color: rgba(255, 255, 255, 0.6);
   --default-color: #364d59;
   --gray-color: rgb(82, 86, 94);
+  --section-bg: rgba(212, 241, 244, 0.6);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -130,7 +131,7 @@ body {
 
 /* get started section  */
 .get-started {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 
 .get-started textarea {
@@ -170,7 +171,7 @@ body {
 
 /* start services section  */
 .services {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 .services .icon {
   width: 60px;
@@ -225,7 +226,7 @@ body {
 
 /* features section  */
 .features {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 .features .nav-link {
   width: fit-content !important;
@@ -289,3 +290,33 @@ body {
 }
 
 /* end projects */
+
+/* testimonials */
+.testimonials {
+  background-color: var(--section-bg);
+}
+
+@media (min-width: 992px) {
+  .testimonials .test-img {
+    position: relative;
+    left: -50px;
+  }
+  .testimonials .card .info {
+    margin-left: -20px;
+  }
+}
+.testimonials .test-img img {
+  max-width: 90px;
+}
+.testimonials .carousel-indicators {
+  bottom: -12px;
+}
+.testimonials .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: var(--default-color);
+}
+.testimonials .carousel-indicators button.active {
+  background-color: var(--primary-color);
+}
+/* end testimonials */

@@ -244,3 +244,48 @@ body {
   filter: grayscale(1);
 }
 /* end features section  */
+
+/* projects */
+.projects .proj-list li {
+  cursor: pointer;
+  color: var(--default-color);
+  transition: 0.3s;
+}
+.projects .proj-list li:hover {
+  color: var(--primary-color);
+}
+
+.projects .proj-item img {
+  transition: 0.3s;
+}
+.projects .proj-item:hover img {
+  transform: rotate(3deg) scale(1.1);
+  filter: brightness(0.5);
+}
+.projects .proj-item .proj-info {
+  transition: 0.3s;
+}
+.projects .proj-item:hover .proj-info {
+  bottom: 0;
+}
+.projects .proj-item .proj-title {
+  margin-left: 1.2rem;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  width: fit-content;
+}
+.projects .proj-item .proj-links a {
+  transition: 0.3s;
+}
+.projects .proj-item .proj-links a:hover {
+  color: var(--primary-color) !important;
+}
+.projects .proj-item .proj-text {
+  position: absolute;
+  bottom: 1.3rem;
+}
+
+/* end projects */

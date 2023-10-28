@@ -320,3 +320,28 @@ body {
   background-color: var(--primary-color);
 }
 /* end testimonials */
+
+/* blog */
+.blog .card .card-img span {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4px 8px;
+}
+.blog .card img {
+  transition: 0.3s;
+}
+.blog .card:hover img {
+  transform: scale(1.1);
+}
+.blog .card-body a {
+  color: var(--default-color);
+}
+.blog .card:hover .card-title a,
+.blog .card:hover .card-footer a {
+  color: var(--primary-color) !important;
+}
+/* end blog */

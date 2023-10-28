@@ -4,6 +4,7 @@
   --secondary-color: rgba(255, 255, 255, 0.6);
   --default-color: #364d59;
   --gray-color: rgb(82, 86, 94);
+  --section-bg: rgba(212, 241, 244, 0.6);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -78,7 +79,8 @@ body {
   background-color: var(--primary-color);
   transition: 0.3s;
 }
-.header .nav-link:hover::before {
+.header .nav-link:hover::before,
+.header .nav-link.active::before {
   width: 100%;
 }
 
@@ -92,25 +94,15 @@ body {
 /* end header  */
 
 /* hero section  */
-.hero::before {
-  /* position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1; */
-}
 .hero .carousel-inner {
   height: 100vh;
 }
 .hero .carousel-inner img {
-  filter: brightness(0.5);
+  filter: brightness(0.4);
 }
 .hero .carousel-caption {
   top: 20%;
-  max-width: 400px;
+  max-width: 600px;
 }
 .hero .carousel-caption h1::after {
   position: absolute;
@@ -123,7 +115,7 @@ body {
   background-color: var(--primary-color);
 }
 .hero .carousel-caption p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero .carousel-control-prev svg,
@@ -139,7 +131,7 @@ body {
 
 /* get started section  */
 .get-started {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 
 .get-started textarea {
@@ -179,7 +171,7 @@ body {
 
 /* start services section  */
 .services {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 .services .icon {
   width: 60px;
@@ -213,12 +205,16 @@ body {
 /* start alt services  */
 .alt-services .icon {
   height: fit-content;
+  transition: 0.4s;
 }
 .alt-services .icon svg {
   transition: 0.3s;
 }
 .alt-services .alt-item:hover .icon svg {
-  opacity: 1 !important;
+  color: #fff !important;
+}
+.alt-services .alt-item:hover .icon {
+  background-color: var(--primary-color) !important;
 }
 .alt-services .alt-item .alt-link {
   transition: 0.3s;
@@ -230,7 +226,7 @@ body {
 
 /* features section  */
 .features {
-  background-color: rgba(212, 241, 244, 0.6);
+  background-color: var(--section-bg);
 }
 .features .nav-link {
   width: fit-content !important;
@@ -249,3 +245,103 @@ body {
   filter: grayscale(1);
 }
 /* end features section  */
+
+/* projects */
+.projects .proj-list li {
+  cursor: pointer;
+  color: var(--default-color);
+  transition: 0.3s;
+}
+.projects .proj-list li:hover {
+  color: var(--primary-color);
+}
+
+.projects .proj-item img {
+  transition: 0.3s;
+}
+.projects .proj-item:hover img {
+  transform: rotate(3deg) scale(1.1);
+  filter: brightness(0.5);
+}
+.projects .proj-item .proj-info {
+  transition: 0.3s;
+}
+.projects .proj-item:hover .proj-info {
+  bottom: 0;
+}
+.projects .proj-item .proj-title {
+  margin-left: 1.2rem;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  width: fit-content;
+}
+.projects .proj-item .proj-links a {
+  transition: 0.3s;
+}
+.projects .proj-item .proj-links a:hover {
+  color: var(--primary-color) !important;
+}
+.projects .proj-item .proj-text {
+  position: absolute;
+  bottom: 1.3rem;
+}
+
+/* end projects */
+
+/* testimonials */
+.testimonials {
+  background-color: var(--section-bg);
+}
+
+@media (min-width: 992px) {
+  .testimonials .test-img {
+    position: relative;
+    left: -50px;
+  }
+  .testimonials .card .info {
+    margin-left: -20px;
+  }
+}
+.testimonials .test-img img {
+  max-width: 90px;
+}
+.testimonials .carousel-indicators {
+  bottom: -12px;
+}
+.testimonials .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: var(--default-color);
+}
+.testimonials .carousel-indicators button.active {
+  background-color: var(--primary-color);
+}
+/* end testimonials */
+
+/* blog */
+.blog .card .card-img span {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4px 8px;
+}
+.blog .card img {
+  transition: 0.3s;
+}
+.blog .card:hover img {
+  transform: scale(1.1);
+}
+.blog .card-body a {
+  color: var(--default-color);
+}
+.blog .card:hover .card-title a,
+.blog .card:hover .card-footer a {
+  color: var(--primary-color) !important;
+}
+/* end blog */

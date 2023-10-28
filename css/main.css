@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 10 version
+*/
+
 /* variables */
 :root {
   --primary-color: #f9cd01;
@@ -12,6 +19,8 @@ body {
 
 /* start main component  */
 .main-heading .main-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0 4rem;
 }
@@ -23,6 +32,8 @@ body {
   height: 3px;
   background-color: var(--primary-color);
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .main-heading .main-title::before {
@@ -55,6 +66,7 @@ body {
 }
 
 .header .navbar-toggler:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .header .navbar-brand span {
@@ -62,8 +74,10 @@ body {
 }
 .header .nav-link {
   position: relative;
-  transition: 0.3s;
   color: var(--secondary-color);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .header .nav-link.active,
 .header .nav-link:hover {
@@ -77,6 +91,8 @@ body {
   width: 0;
   height: 2px;
   background-color: var(--primary-color);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .header .nav-link:hover::before,
@@ -89,6 +105,8 @@ body {
   display: inline-block;
 }
 .header .offcanvas .nav-link:hover {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
   transform: translateX(5px);
 }
 /* end header  */
@@ -98,6 +116,7 @@ body {
   height: 100vh;
 }
 .hero .carousel-inner img {
+  -webkit-filter: brightness(0.4);
   filter: brightness(0.4);
 }
 .hero .carousel-caption {
@@ -108,6 +127,8 @@ body {
   position: absolute;
   content: "";
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   bottom: -20px;
   width: 20%;
@@ -140,6 +161,7 @@ body {
 }
 .get-started input:focus,
 .get-started textarea:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
   border-color: var(--primary-color);
 }
@@ -150,6 +172,8 @@ body {
 
 /* start construction section  */
 .construction .card {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .construction .card-bg {
@@ -162,9 +186,13 @@ body {
   color: var(--default-color);
 }
 .construction .card img {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 .construction .card:hover img {
+  -webkit-transform: rotate(2deg) scale(1.05);
+  -ms-transform: rotate(2deg) scale(1.05);
   transform: rotate(2deg) scale(1.05);
 }
 /* end construction section  */
@@ -193,8 +221,12 @@ body {
   background-color: var(--primary-color);
 }
 .services .card-body h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-bottom: 4px solid #eee;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .services .card:hover .card-body h3 {
@@ -204,10 +236,16 @@ body {
 
 /* start alt services  */
 .alt-services .icon {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 .alt-services .icon svg {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .alt-services .alt-item:hover .icon svg {
@@ -217,6 +255,8 @@ body {
   background-color: var(--primary-color) !important;
 }
 .alt-services .alt-item .alt-link {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .alt-services .alt-item:hover .alt-link {
@@ -229,7 +269,11 @@ body {
   background-color: var(--section-bg);
 }
 .features .nav-link {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
   width: fit-content !important;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .features .nav-link:hover {
@@ -239,9 +283,12 @@ body {
   border-color: var(--primary-color) !important;
 }
 .features .feat-img {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .features .feat-img:hover {
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
 /* end features section  */
@@ -250,6 +297,8 @@ body {
 .projects .proj-list li {
   cursor: pointer;
   color: var(--default-color);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .projects .proj-list li:hover {
@@ -257,13 +306,20 @@ body {
 }
 
 .projects .proj-item img {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .projects .proj-item:hover img {
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
   transform: rotate(3deg) scale(1.1);
+  -webkit-filter: brightness(0.5);
   filter: brightness(0.5);
 }
 .projects .proj-item .proj-info {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .projects .proj-item:hover .proj-info {
@@ -276,9 +332,13 @@ body {
   background-color: var(--primary-color);
   color: #fff;
   font-size: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .projects .proj-item .proj-links a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .projects .proj-item .proj-links a:hover {
@@ -288,7 +348,6 @@ body {
   position: absolute;
   bottom: 1.3rem;
 }
-
 /* end projects */
 
 /* testimonials */
@@ -332,9 +391,13 @@ body {
   padding: 4px 8px;
 }
 .blog .card img {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .blog .card:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 .blog .card-body a {
@@ -345,3 +408,33 @@ body {
   color: var(--primary-color) !important;
 }
 /* end blog */
+
+/* footer  */
+.footer {
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.footer .social a {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  color: #fff;
+}
+.footer .social a:hover {
+  background-color: var(--primary-color);
+}
+.footer a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer a:hover {
+  opacity: 1 !important;
+}
